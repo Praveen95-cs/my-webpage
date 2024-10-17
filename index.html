@@ -4,23 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Age Calculator</title>
+    <title>Age Calculator with Chatbot</title>
 </head>
 <body>
     <div class="container">
+        <h1>Age Calculator</h1>
         <p id="currDate"></p>
         <p>Enter your D.O.B in the format: <strong>(MM/DD/YYYY)</strong></p>
         <label for="DOB">Date of Birth:</label>
-        <input type="text" placeholder="MM/DD/YYYY" id="DOB" maxlength="10" aria-label="Date of Birth">
-        <button id="CalcAge">Calculate Age</button>
+        <input type="text" placeholder="MM/DD/YYYY" id="DOB" maxlength="10" aria-label="Date of Birth" required>
+        <div>
+            <button id="CalcAge">Calculate Age</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="displayAge" class="age-display">
+            <p id="age"></p>
+        </div>
+        
+        <section class="info">
+            <h2>About This Calculator</h2>
+            <p>This Age Calculator allows you to find out your exact age in years, months, and days based on your date of birth.</p>
+            <p>It provides a user-friendly interface to make calculating your age quick and easy!</p>
+            <h3>Healthy Living Tips</h3>
+            <ul>
+                <li><strong>Stay Active:</strong> Engage in regular physical activity to maintain a healthy body and mind.</li>
+                <li><strong>Stay Hydrated:</strong> Drink plenty of water throughout the day.</li>
+                <li><strong>Get Enough Sleep:</strong> Aim for 7-9 hours of quality sleep each night.</li>
+                <li><strong>Manage Stress:</strong> Practice relaxation techniques like yoga or meditation.</li>
+            </ul>
+        </section>
+
+        <section class="chatbot">
+            <h2>Health Benefits Chatbot</h2>
+            <div id="chatbox" class="chatbox">
+                <div id="chat-log" aria-live="polite"></div>
+                <input type="text" id="user-input" placeholder="Ask about health benefits..." aria-label="User input for chatbot">
+                <button id="send-btn">Send</button>
+            </div>
+        </section>
     </div>
-    <div id="displayAge">
-        <p id="age"></p>
-    </div>
-    <footer>
-        <h4>👨‍💻 Developed by Praveen S 🎉</h4>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <h4>👨‍💻 Developed by Praveen S</h4>
+            <div class="contact-info">
+                <p><strong><i class="fas fa-phone-alt"></i> Contact:</strong> +91 9500995591</p>
+                <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:praveensumathi12.com">praveensumathi12.com</a></p>
+                <p><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/praveen95-cs" target="_blank">github.com/praveen95-cs</a></p>
+            </div>            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Praveen S. All Rights Reserved.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+    
+    <script src="script.js"></script>S
 </body>
 </html>
+
