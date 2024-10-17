@@ -1,0 +1,102 @@
+body {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: 10% auto;
+    padding: 5% 2%;
+    background-color: rgba(26, 26, 75, 0.9);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/flower-pattern.png'); /* Flower pattern image */
+    background-size: cover;
+    opacity: 0.2; /* Light overlay */
+    border-radius: 15px;
+    z-index: 0; /* Send it behind the content */
+}
+
+.container > * {
+    position: relative; /* Ensure text is above the flower background */
+    z-index: 1; /* Bring the text above the flower background */
+}
+
+#currDate {
+    font-size: 40px;
+    margin: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+input {
+    font-size: 20px;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #ffea00;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #ffea00;
+    outline: none;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ffea00;
+    color: black;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
+    transform: scale(1.05);
+}
+
+#displayAge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Take full width */
+    height: 480px;
+    background-color: rgba(228, 91, 91, 0.9);
+    border-radius: 30px;
+    position: relative; /* Change to relative for proper layering */
+    margin-top: 20px; /* Add margin to separate from other elements */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    visibility: hidden; /* Keep hidden until shown */
+}
+
+#age {
+    color: white;
+    font-size: 50px;
+    margin: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
